@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('./images/bg_image.jpg');
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+main{
+    max-width: 1000px;
+    height: 95vh;
+    width: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    color: black;
+}
+.title{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: black;
+}
+.task_title{
+    font-size: 32px;
+    font-weight: 500;
+    color: #0e0b11;
+}
+.separaton{
+    height: 1px;
+    background-color: white;
+    margin: 5px 0;
+}
+#form{
+    display: flex;
+    justify-content: space-between;
+}
+#form .task_name{
+
+}
+label{
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 4px ;
+    border-radius: 2px;
+}
+#form .task_name #name{
+    height: 30px;
+    width: 300px;
+    padding: 4px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    overflow: hidden;
+}
+#form .priority_list{
+}
+#form .priority_list label{}
+#form .priority_list #priority{
+    height: 30px;
+    padding: 4px;
+    border-radius: 4px;
+}
+#form .date{
+   
+}
+#form .date label{
+}
+#form .date #date{
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 4px;
+    border-radius: 4px;
+}
+#form .submit{
+}
+#form .submit input{
+    height: 30px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background-color: green;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+.task_managent{
+    margin: 8px 0;
+    font-size: 32px;
+    font-weight: 500;
+}
+.search_tools{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.search_tools .search{}
+.search_tools .search #search{
+    height: 30px;
+    padding: 4px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+.search_tools .filter{}
+.search_tools .filter #filter{
+    height: 30px;
+    padding: 4px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+.search_tools .sort #sort{
+    height: 30px;
+    padding: 4px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+.search_tools .by_date #by_date{
+    height: 30px;
+    padding: 4px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+#bulk_action{
+   display: none;
+   align-items: center;
+    background-color: white;
+   padding: 6px 8px;
+   border-radius: 8px;
+   margin-bottom: 10px;
+
+
+}
+#bulk_action #delete_btn{
+    margin-left: 40px;
+    padding: 5px 20px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 6px;
+}
+#bulk_action #edit_btn{
+    margin-left: 10px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: yellow;
+}
+#bulk_action #dismiss{
+    margin-left: 10px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: green;
+}
+#edit_section{
+    display: none;
+    margin: 20px 0;
+    
+}
+#edit_section #edit_form{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#edit_section #edit_form .task_name{}
+#edit_section #edit_form .task_name #edit_name{
+    height: 30px;
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+}
+#edit_section #edit_form .priority_list #edit_priority{
+    height: 30px;
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+#edit_section #edit_form .date{}
+#edit_section #edit_form .date #edit_date{
+    height: 30px;
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+#edit_section #edit_form .edit_submit input{
+    height: 30px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background-color: green;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: green;
+  }
+  
+  th {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
+  
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+  #bodyt tr:hover{
+    background-color: rgb(182, 178, 178);
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  button i{
+    pointer-events: none;
+  }
+  
+  button + button {
+    margin-left: 5px;
+  }
+  
+  #edit {
+    color: #007bff;
+  }
+  
+  #check {
+    color: #28a745;
+  }
+
+  #delete {
+    color: #dc3545;
+  }
+  
+.saveBTN{
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+}
+
+.saveBTN:hover{
+    background-color: #45a049;
+}
+
+.saveBTN:active{
+    color: #333; 
+}
+
+
+main #noTasksMessage{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 700;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Todo List</title>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./app.js"></script>
+</head>
+<body>
+    <main>
+        <h1 class="title">My To-Do Lists</h1>
+        <h2 class="task_title">New Task Creation</h2>
+        <div class="separaton"></div>
+        <!-- 1st section & form start -->
+        <form id="form">
+            <!-- task name -->
+            <div class="task_name">
+                <label for="name">Name</label>
+                <input required type="text" name="name" id="name" placeholder="Add new task">
+            </div>
+
+            <!-- priority list -->
+            <div class="priority_list">
+                <label for="priority">Priority</label>
+                <select required name="priority" id="priority">
+                    <option selected value="select one" >Select One</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <!-- Date Start -->
+            <div class="date">
+                <label for="date">Date</label>
+                <input type="date" required name="date" id="date">
+            </div>
+
+            <!-- Submit Btn -->
+            <div class="submit">
+                <input type="submit" value="Add Now">
+            </div>
+        </form>
+        <!-- 1st section & form end -->
+
+        <!-- 2nd section and task start  -->
+        <h3 class="task_managent">Task Management</h3>
+        <div class="separaton"></div>
+        <!-- search -->
+        <div class="search_tools">
+            <div class="search">
+                <label for="search">Search</label>
+                <input type="search" name="search" id="search" placeholder="Search by name">
+            </div>
+
+            <!-- filter -->
+            <div class="filter">
+                <label for="filter">Filter</label>
+                <select name="filter" id="filter">
+                    <option value="all">All</option>
+                    <option value="1">Completed</option>
+                    <option value="0">Pending</option>
+                    <option value="today">Today</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <!-- Sort -->
+            <div class="sort">
+                <label for="sort">Sort</label>
+                <select name="sort" id="sort">
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+            </div>
+
+            <!-- select date -->
+            <div class="by_date">
+                <label for="by_date">By_Date</label>
+                <input type="date" name="by_date" id="by_date">
+            </div>
+        </div>
+        <!-- 2nd section and task end  -->
+
+        <!-- Third Bulk_action & Edit Section Start -->
+
+        <!-- bulk_action -->
+        <div id="bulk_action">
+            <button id="delete_btn">Delete</button>
+            <button id="edit_btn">Edit</button>
+            <button id="dismiss">X</button>
+        </div>
+
+        <!-- edit section -->
+        <div id="edit_section">
+            <form id="edit_form">
+                <!-- task name -->
+                <div class="task_name">
+                    <label for="edit_name">Name</label>
+                    <input type="text" name="name" id="edit_name" placeholder="Add new task">
+                </div>
+    
+                <!-- priority list -->
+                <div class="priority_list">
+                    <label for="edit_priority">Priority</label>
+                    <select required name="priority" id="edit_priority">
+                        <option disabled value="">Select One</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+    
+                <!-- Date Start -->
+                <div class="date">
+                    <label for="edit_date">Date</label>
+                    <input type="date" name="date" id="edit_date">
+                </div>
+    
+                <!-- Submit Btn -->
+                <div class="edit_submit">
+                    <input type="submit" value="Add Now">
+                </div>
+            </form>
+        </div>
+        <!-- Third Bulk_action & Edit Section End -->
+
+        <!-- fourth section table starrt -->
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <label for="checkbox" style="margin-right: 5px; background-color: transparent;" for="checkbox">All</label>
+                        <input type="checkbox" style="margin-right: 32px;" name="checkbox" id="allSelect">
+                    </th>
+                    <th>No.</th>
+                    <th>Task Name</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+        <!-- fourth section table end -->
+
+        <!-- display show -->
+        <div id="noTasksMessage">Please Add New Tasks</div>
+
+    </main>
+</body>
+</html>
